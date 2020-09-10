@@ -198,7 +198,7 @@ header {
 			position: relative;
 			&::before {
 				content: '';
-				background-image: url('../../img/starting-point.png');
+				background-image: url('../img/starting-point.png');
 				background-repeat: no-repeat;
 				width: 6px;
 				height: 11px;
@@ -524,7 +524,7 @@ header {
 			display: block;
 			width: 39px;
 			height: 38px;
-			background: url('../../img/quote-transparent.png') top left no-repeat;
+			background: url('../img/quote-transparent.png') top left no-repeat;
 			position: absolute;
 			top: -8px;
 			left: 30px;
