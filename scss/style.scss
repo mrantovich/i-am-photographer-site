@@ -31,6 +31,10 @@ header {
 	font-weight: 400;
 	margin-bottom: 23px;
 
+	@media (max-width: 767px) {
+		font-size: 32px;
+	}
+
 	&_big {
 		font-size: 48px;
 		font-weight: 500;
@@ -431,6 +435,9 @@ header {
 .portfolio {
 	padding-top: 130px;
 	padding-bottom: 130px;
+	@media (max-width: 1200px) {
+		padding: 110px 30px;
+	}
 
 	&__title {
 	}
@@ -477,7 +484,7 @@ header {
 			height: calc(100% - 66px);
 			background-color: rgba(#ffffff, 0.6);
 			opacity: 0;
-			visibility: 0;
+			visibility: hidden;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -501,12 +508,13 @@ header {
 				top: calc(25% - 10px);
 				left: calc(50% + 10px);
 			}
+
 		}
 
 		&:hover {
 			& span {
 				opacity: 1;
-				visibility: 1;
+				visibility: visible;
 			}
 		}
 
@@ -518,6 +526,7 @@ header {
 		&-subtitle {
 			font-size: 14px;
 		}
+
 	}
 }
 
@@ -548,6 +557,9 @@ header {
 	&__claim {
 		font-size: 48px;
 		margin-bottom: 28px;
+		@media (max-width: 992px) {
+			font-size: 36px;
+		}
 	}
 
 	&__button {
@@ -563,6 +575,10 @@ header {
 	padding-top: 126px;
 	padding-bottom: 185px;
 
+	@media (max-width: 1200px) {
+		padding: 110px 30px;
+	}
+
 	&__title {
 	}
 
@@ -573,6 +589,11 @@ header {
 		display: grid;
 		grid-template: 1fr / 1fr 1fr;
 		grid-gap: 28px;
+
+		@media (max-width: 767px) {
+			grid-template: 1fr 1fr / 1fr;
+			grid-gap: 46px;
+		}
 	}
 
 	&__item {
@@ -581,6 +602,9 @@ header {
 	&__item-head {
 		display: flex;
 		margin-bottom: 62px;
+		@media (max-width: 767px) {
+			margin-bottom: 36px;
+		}
 	}
 
 	&__item-photo {
@@ -641,12 +665,21 @@ header {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
+		@media (max-width: 767px) {
+			flex-direction: column;
+		}
 	}
 
 	&__item {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		@media (max-width: 767px) {
+			margin-bottom: 38px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	&__pic {
@@ -684,6 +717,10 @@ header {
 
 	padding: 127px 0;
 
+	@media (max-width: 1200px) {
+		padding: 110px 20px;
+	}
+
 	&__title {
 	}
 
@@ -691,6 +728,7 @@ header {
 	}
 
 	&__box {
+		max-width: 750px;
 		&-form {
 			display: flex;
 			flex-direction: column;
@@ -700,7 +738,7 @@ header {
 			display: block;
 			color: $light-color;
 			text-align: center;
-			width: 750px;
+			width: 100%;
 			height: 33px;
 			margin-bottom: 33px;
 			border-bottom: 1px solid #e1e1e1;
@@ -709,7 +747,7 @@ header {
 			display: block;
 			color: $light-color;
 			text-align: center;
-			width: 750px;
+			width: 100%;
 			height: 68px;
 			margin-bottom: 35px;
 			border-bottom: 1px solid #e1e1e1;
@@ -718,13 +756,13 @@ header {
 
 	&__button {
 		padding: 20px 0;
-		width: 750px;
-		/**
-		временно!
-		**/
-		@media (max-width: 992px) {
-			width: 500px;
-		}
+		// width: 750px;
+		// /**
+		// временно!
+		// **/
+		// @media (max-width: 992px) {
+		// 	max-width: 500px;
+		// }
 	}
 }
 
@@ -749,21 +787,28 @@ header {
 			color: $dark-color;
 		}
 	}
+
+	@media (max-width: 767px) {
+		font-size: 14px;
+	}
 }
 
 footer {
 	background-color: $dark-color;
-	height: 150px;
+	min-height: 150px;
 }
 
 .footer {
 
-	padding: 65px 0;
+	padding: 65px 30px;
 
 	&__box {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		@media (max-width: 992px) {
+			flex-direction: column;
+		}
 	}
 
 	&__copy {
@@ -771,6 +816,9 @@ footer {
 		font-size: 16px;
 		font-weight: 300;
 		letter-spacing: 0.84px;
+		@media (max-width: 992px) {
+			margin-bottom: 38px;
+		}
 	}
 
 	&__social {
