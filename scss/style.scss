@@ -327,6 +327,9 @@ header {
 .services {
 	background-color: #faf9fe;
 	padding: 130px 0;
+	@media (max-width: 1200px) {
+		padding: 110px 30px;
+	}
 
 	&__title {
 		text-align: center;
@@ -340,9 +343,20 @@ header {
 		display: grid;
 		grid-template: 1fr 1fr / 1fr 1fr 1fr;
 		grid-gap: 42px 60px;
+		@media (max-width: 1200px) {
+			grid-gap: 42px 30px;
+		}
+		@media (max-width: 992px) {
+			grid-template: 1fr 1fr 1fr / 1fr 1fr;
+		}
+		@media (max-width: 600px) {
+			grid-template: 1fr 1fr 1fr 1fr / 1fr;
+		}
 	}
 
 	&__item {
+		display: flex;
+		flex-direction: column;
 		padding-right: 5px;
 		position: relative;
 		&:hover {
@@ -354,6 +368,9 @@ header {
 			.services__item-read-more-line {
 				left: 80px;
 			}
+		}
+		@media (max-width: 600px) {
+			align-items: center;
 		}
 	}
 
@@ -388,6 +405,10 @@ header {
 			bottom: 10px;
 			opacity: 0;
 			width: 0;
+			@media (max-width: 992px) {
+				opacity: 1;
+				width: 100%;
+			}
 		}
 
 		&-line {
@@ -399,6 +420,9 @@ header {
 			position: absolute;
 			bottom: 16px;
 			left: 0;
+			@media (max-width: 992px) {
+				left: 80px;
+			}
 		}
 
 	}
